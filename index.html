@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>P-bus</title>
 
     <!-- tailwind and daisy ui cdn install -->  
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
@@ -11,19 +11,90 @@
     <script src="https://cdn.tailwindcss.com"></script>
         
     <!-- font install -->
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/091e5421e5.js" crossorigin="anonymous"></script>
+    
 </head>
 <body>
-     <header>
+    <div class="container text-4xl mx-auto">
+        <header class="flex justify-between mt-8">
+            <div class="font-bold"><h1>P-Ticket</h1></div>
+            <div>
+                <button class="btn btn-primary bg-[#1DD100] rounded-2xl border-2 bg-opacity-10 border-inherit text-xl font-bold text-[#1DD100]">Bus<span><img src="./images/bus-icon.png" alt=""></span></button>
+            </div>
+        </header>
+    </div>    
+    <main>      
+        <!-- banner section  -->
+        <section class="container mx-auto mt-8">
+            <div class="bg-[url('images/banner.png')] bg-no-repeat bg-cover bg-center h-[670px] rounded-3xl pt-20 text-center ">
+                <h1 class="text-5xl text-white font-bold">End-to-End Travel with</h1>
+                    <h2 class="font-bold text-[#1DD100] text-5xl pt-8">P Paribahan</h2>
+                     <p class="pt-8 text-white text-2xl w-2/4 mx-auto pb-10">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
+                     <button class="btn btn-outline btn-success bg-[#1DD100] text-[#030712] bg-opacity-40 text-2xl ">Buy Tickets</button>
+            </div>
+        </section>
 
-     </header>   
-    <main>
+        <!-- Best offer section -->
+        <section class="container mx-auto mt-32 ">
+            <h1 class="text-5xl text-[#030712] mb-10 font-bold text-center">Best offers for you</h1>
+            <div class="flex justify-between ">
+                <div class="flex bg-[#FFBF0F] w-[48%] rounded-3xl">
+                    <div class="w-[60%] text-center pt-20">
+                        <h3 class="text-[#030712] text-3xl font-bold">15% OFF</h3>
+                        <P class="text-[#030712] text-xl">On your next purchase</P>
+                        <P class="text-[#030712] opacity-40">use by march 2024</P>
+                    </div>
+                    <div><img src="./images/cupon-devider.png" alt=""></div>
+                    <div class="text-center ml-8 pt-20">
+                        <h3 class="text-[#030712] text-3xl  font-bold">NEW15</h3>
+                        <P class="text-[#030712] text-xl">Coupon code</P>
+                    </div>
+                </div>
+                
+                <!-- offer part 2 -->
+                    <div class="flex bg-[#F78C9C] w-[48%] rounded-3xl">
+                        <div class="w-[60%] text-center pt-20">
+                            <h3 class="text-[#030712] text-3xl font-bold">20% OFF</h3>
+                            <P class="text-[#030712] text-xl">On your next purchase</P>
+                            <P class="text-[#030712] opacity-40">use by march 2024</P>
+                        </div>
+                        <div><img src="./images/cupon-devider.png" alt=""></div>
+                        <div class="text-center ml-8 pt-20">
+                            <h3 class="text-[#030712] text-3xl  font-bold">Couple 20</h3>
+                            <P class="text-[#030712] text-xl">Coupon code</P>
+                        </div>
+                    </div>
 
+                    
+            </div>
+            <div class="text-center mt-20">
+                <button type="submit"  class="btn text-[#1DD100] border-[#1DD100] text-xl">See all Offers</button>
+            </div>
+        </section>
+
+        <!-- Bus Info -->
+        <section class="bg-[#F7F8F8]">
+            <div class="container">
+                <div>
+                    <h1>P.H Paribahan</h1>
+                    <p>Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
+                </div>
+
+                <div class="bg-[#ffffff]">
+                    <div></div>
+                    <div><img src="./images/info-devider.png" alt=""></div>
+                    <div></div>
+                </div>
+            </div>
+        </section>
     </main>
     <footer>
-        
+
     </footer>
 
     <!-- script src  -->
