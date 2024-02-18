@@ -17,6 +17,17 @@
 
     <!-- font awesome -->
     <script src="https://kit.fontawesome.com/091e5421e5.js" crossorigin="anonymous"></script>
+    <style>
+         .tckt-btn{
+            padding: 10px;
+    background-color: #ebeced;
+    width: 4.5em;
+    padding: 20px;
+    border-radius: 17px;
+    text-align: center;
+
+         }
+    </style>
     
 </head>
 <body>
@@ -35,7 +46,7 @@
                 <h1 class="text-5xl text-white font-bold">End-to-End Travel with</h1>
                     <h2 class="font-bold text-[#1DD100] text-5xl pt-8">P Paribahan</h2>
                      <p class="pt-8 text-white text-2xl w-2/4 mx-auto pb-10">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
-                     <button class="btn btn-outline btn-success bg-[#1DD100] text-[#030712] bg-opacity-40 text-2xl ">Buy Tickets</button>
+                     <a href="#ph-parbibahan"><button  class="btn btn-outline btn-success bg-[#1DD100] text-[#030712] bg-opacity-40 text-2xl ">Buy Tickets</button></a>
             </div>
         </section>
 
@@ -78,7 +89,7 @@
         </section>
 
         <!-- Bus Info -->
-        <section class="bg-[#F7F8F8] mt-20">
+        <section id="ph-parbibahan" class="bg-[#F7F8F8] mt-20">
             <div class="container mx-auto">
                 <div class="text-center">
                     <h1 class="text-4xl text-[#030712] font-bold pt-40 mb-10">P.H Paribahan</h1>
@@ -149,27 +160,80 @@
         </section>
 
         <!-- ticket section -->
-        <section>
+        <section class="bg-[#F7F8F8]">
           <div class="container mx-auto">  
-            <div class="grid-cols-2">
+            <div class="grid gap-5 grid-cols-2">
                 <div class="">
                     <h1>
                         Select your seat
                     </h1>
                     <hr>
-                    <div class="flex">
+                    <div class="flex justify-between">
                         <p>Available</p>
-                        <p>Seclected</p>
+                        <p class="text-[#1DD100]">Seclected</p>
                     </div>
                     <hr>
                     <div>
                         <img src="" alt="">
                     </div>
-                    <div>
-
+                    <!-- ticket -->
+                    <div class="mt-12 ">
+                        <div  class="grid grid-cols-2">
+                            <div class="grid grid-cols-3 gap-6 w-3/4 grid-rows-2">
+                                <button>A</button>
+                                <button class="tckt-btn">A1</button>
+                                <button class="tckt-btn">A2</button>
+                                <button class="">B</button>
+                                <button class="tckt-btn">B1</button>
+                                <button class="tckt-btn">B2</button>
+                            </div>
+                            <div class="grid grid-cols-2 w-2/4 gap-6 grid-rows-2">
+                                <button class="tckt-btn">A3</button>
+                                <button class="tckt-btn">A4</button>
+                                <button class="tckt-btn">B3</button>
+                                <button class="tckt-btn">B4</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="bg-green-900 h-48 w-64"></div>
+
+ <!-- right side -->
+                <div class="border-l-2 border-dashed p-5">
+                    <div>
+                        <h1>
+                            Select your seat
+                        </h1>
+                    </div>
+                    <hr>
+                    <div>
+                        <div class="grid grid-cols-3 grid-rows-3 p-5">
+                            <div>Seat</div>
+                            <div>Class</div>
+                            <div>Price</div>
+                            <div></div>
+                            <div>Economy</div>
+                            <div>0</div>
+                            <div></div>
+                            <div>Economy</div>
+                            <div>0</div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="grid grid-cols-2">
+                        <div><h1>Total Price</h1></div>
+                        <div class="text-center w-2/3 ml-1"><h1>0</h1></div>
+                        
+                    </div>
+                    <div>
+                        <input class="p-3 rounded-xl" type="text" placeholder="get your coupon"><button class="btn btn-primary bg-[#1DD100] rounded-2xl border-2  border-inherit text-xl font-bold text-[#ffff]">Apply</button>
+                    </div>
+                    <div class="grid grid-cols-2">
+                        <div><h1>Total Price</h1></div>
+                        <div class="text-center w-2/3 ml-1"><h1>0</h1></div>
+                        
+                    </div>
+
+                </div>
             </div>
         </div>  
         </section>
