@@ -1,67 +1,28 @@
-// const allBtn = document.getElementsByClassName("tckt-btn");
-// let count = 0;
-// let seatCount = 8;
-
-// function disableButtons() {
-//     for (const btn of allBtn) {
-//         btn.disabled = true;
-//     }
-// }
-
-// for (const btn of allBtn) {
-//     btn.addEventListener("click", function(e) {
-//         count += 1;
-//         seatCount -= 1;
-
-//         document.getElementById("seat-left").innerText = seatCount;
-//         document.getElementById("tckt-count").innerText = count;
-
-//         if (count >= 4 || seatCount <= 0) {
-//             alert('You have reached your limit.');
-//             disableButtons();
-//         }
-//     });
-// }
 
 
+let totalPrice = 0;
 
+const allBtn = document.getElementsByClassName("tckt-btn");
+let count = 0;
+let seatCount = 8;
 
-
-
-
-
-
-
-
-
-const allBtn=document.getElementsByClassName("tckt-btn");
-// console.log(allBtn)
-count = 0;
-seatCount = 8
-for(const btn of allBtn){
-    btn.addEventListener("click", function(e){
+for (const btn of allBtn) {
+    btn.addEventListener("click", function (e) {
         count += 1;
         seatCount -= 1;
-        if(count<=4){
+        if (count <= 4) {
             document.getElementById("seat-left").innerText = seatCount;
             document.getElementById("tckt-count").innerText = count;
+        } else {
+            alert('You have reached your limit of tickets.');
         }
-        else{
-            alert('you reach your level')
-        }
-        
-// appendchild part
 
         const seatNumber = btn.textContent;
+        const ticketClass = "Economy";
+        const ticketPrice = 550;
 
-        // Example data for class and price
-        const ticketClass = "Economy"; // Example class
-        const ticketPrice = 550; // Example price
-
-        // Create a new table row element
         const newRow = document.createElement("tr");
 
-        // Create and append table data for seat number, class, and price
         const seatData = document.createElement("td");
         seatData.innerText = seatNumber;
 
@@ -75,21 +36,52 @@ for(const btn of allBtn){
         newRow.appendChild(classData);
         newRow.appendChild(priceData);
 
-        // // Append the new row to the table
         const table = document.getElementById("output-id");
         table.appendChild(newRow);
-        table.style.marginLeft = "20px"
-    })
-    
-    
+        table.style.marginLeft = "20px";
+
+        // calculate cost
+        const totalCostElement = document.getElementById("total-cost");
+        let totalCost = parseInt(totalCostElement.innerText);
+        totalPrice += ticketPrice;
+        totalCostElement.innerText = totalPrice;
+        document.getElementById("total-cost").innerText = totalPrice;
+
+
+
+    });
 }
 
-function disableButtons() {
-        for (const btn of selectedButton) {
-            btn.disabled = true;
-        }
+// Apply button 
+const Btn = document.getElementById("Apply-btn");
+Btn.addEventListener("click", function () {
+    const coupon = document.getElementById("input-field").value;
+    // const couponCode = "NEW15";
+
+    if (coupon === "NEW15") {
+        const discountElement = document.getElementById("discount-price")
+        const discountAmount = totalPrice * 0.15;  
+        // console.log(discountAmount)
+        discountElement.innerText = discountAmount.toFixed(2);
+
+        // Grand price calculation
+        const finalPrice = document.getElementById("final-price")
+        finalPrice.innerText = totalPrice - discountAmount;
+
+    }else if(coupon === "Couple 20"){
+        const discountElement = document.getElementById("discount-price")
+        const discountAmount2 = totalPrice * 0.2;
+        discountElement.innerText = discountAmount2.toFixed(2);
+
+         // Grand price calculation
+         const finalPrice = document.getElementById("final-price")
+         finalPrice.innerText = totalPrice - discountAmount2;
+    } 
+     else {
+        alert('Invalid Coupon code');
     }
-    
+});
+
 
 
 
@@ -115,22 +107,4 @@ for (let i = 0 ; i<selectedButton.length ; i++){
     }
 
 }
-
-
-
-
-
-  ///////////
-
-// Select all ticket buttons
-// Select all ticket buttons
-// const allBtns = document.querySelectorAll(".tckt-btn");
-
-// for (const btn of allBtns) {
-//     btn.addEventListener("click", function(e) {
-//         // Get seat number from the button text
-        
-
-//     });
-// }
 

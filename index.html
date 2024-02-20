@@ -200,12 +200,12 @@
  <!-- right side -->
                 <div class="border-l-2 border-dashed p-5">
                     <div>
-                        <h1>
+                        <h1 class="mb-4" >
                             Select your seat
                         </h1>
                     </div>
                     <hr>
-                    <div>
+                    <div class="mt-4 mb-4">
                         <table>
                             <tr class="p-5">
                             <td id="seat-no">Seat<span class="bg-green-400 text-sm p-1 w-2 rounded-xl"  id="tckt-count">0</span></td>
@@ -229,17 +229,21 @@
                         </table>
                     </div>
                     <hr>
-                    <div class="grid grid-cols-2">
-                        <div><h1>Total Price</h1></div>
-                        <div class="text-center w-2/3 ml-1"><h1>0</h1></div>
+                    <table class="grid grid-cols-2">
+                        <td>Total Price</td>
+                        <td id="total-cost" class="text-center w-2/3 ml-1">0</td>
                         
+                    </table>
+                    <div class="mt-4 mb-4">
+                        <input id="input-field" class="p-3 border-black rounded-xl" type="text" placeholder="get your coupon">
+                        <button id="Apply-btn" class="btn btn-primary bg-[#1DD100] rounded-2xl border-2  border-inherit text-xl font-bold text-[#ffff]">Apply</button>
                     </div>
-                    <div>
-                        <input class="p-3 rounded-xl" type="text" placeholder="get your coupon"><button class="btn btn-primary bg-[#1DD100] rounded-2xl border-2  border-inherit text-xl font-bold text-[#ffff]">Apply</button>
+                    <div class="mt-4 mb-4">
+                        <h1>Discount : <span id="discount-price"></span> </h1> 
                     </div>
                     <div class="grid grid-cols-2">
                         <div><h1>Total Price</h1></div>
-                        <div class="text-center w-2/3 ml-1"><h1>0</h1></div>
+                        <div class="text-center w-2/3 ml-1"><span id = "final-price" class=" bg-[#1DD100]  border text-xl font-bold text-[#ffff]"></span></div>
                         
                     </div>
 
