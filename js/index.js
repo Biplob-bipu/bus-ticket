@@ -1,5 +1,4 @@
 
-
 let totalPrice = 0;
 
 const allBtn = document.getElementsByClassName("tckt-btn");
@@ -13,10 +12,20 @@ for (const btn of allBtn) {
         if (count <= 4) {
             document.getElementById("seat-left").innerText = seatCount;
             document.getElementById("tckt-count").innerText = count;
+            
+                
         } else {
             alert('You have reached your limit of tickets.');
         }
 
+        if(count >=5){
+            table.appendChild(newRow);    
+        }
+
+        // for green Selected button
+        btn.style.backgroundColor = 'green';
+        
+        // appenchild section
         const seatNumber = btn.textContent;
         const ticketClass = "Economy";
         const ticketPrice = 550;
@@ -38,11 +47,11 @@ for (const btn of allBtn) {
 
         const table = document.getElementById("output-id");
         table.appendChild(newRow);
-        table.style.marginLeft = "20px";
+  
 
         // calculate cost
         const totalCostElement = document.getElementById("total-cost");
-        let totalCost = parseInt(totalCostElement.innerText);
+        const totalCost = parseInt(totalCostElement.innerText);
         totalPrice += ticketPrice;
         totalCostElement.innerText = totalPrice;
         document.getElementById("total-cost").innerText = totalPrice;
@@ -64,7 +73,7 @@ Btn.addEventListener("click", function () {
         // console.log(discountAmount)
         discountElement.innerText = discountAmount.toFixed(2);
 
-        // Grand price calculation
+        //grand price discount1 calculation
         const finalPrice = document.getElementById("final-price")
         finalPrice.innerText = totalPrice - discountAmount;
 
@@ -73,7 +82,7 @@ Btn.addEventListener("click", function () {
         const discountAmount2 = totalPrice * 0.2;
         discountElement.innerText = discountAmount2.toFixed(2);
 
-         // Grand price calculation
+         // Grand price discount2 calculation
          const finalPrice = document.getElementById("final-price")
          finalPrice.innerText = totalPrice - discountAmount2;
     } 
@@ -81,30 +90,4 @@ Btn.addEventListener("click", function () {
         alert('Invalid Coupon code');
     }
 });
-
-
-
-
-// for green button
-const selectedButton = document.querySelectorAll(".tckt-btn");
-let totalClicks = 0;  
-    
-for (let i = 0 ; i<selectedButton.length ; i++){
-        selectedButton[i].addEventListener('click', function(){
-            this.style.backgroundColor ='green';
-        });
-
-        function buttonClickHandler(){
-        if (totalClicks <=4){
-
-            this.style.backgroundColor = 'green';
-            totalClicks++;
-            disableButtons()
-        }
-        
-        
-
-    }
-
-}
 
